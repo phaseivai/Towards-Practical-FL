@@ -39,8 +39,8 @@ def find_max_lesion(df):
 
 def is_anomaly(val):
     
-    """This function (for Turkey datasets) returns True if the ISUP grade starts with 3 and is 
-    followed by zeros (which is not correct) or is equal to 0 for the CHina1.csv dataset"""
+    """This function (for China1 datasets) returns True if the ISUP grade starts with 3 and is 
+    followed by zeros (which is not correct) or is equal to 0 """
     
     return str(val).startswith('3') and str(val)[1:] == '0' * (len(str(val)) - 1) or val == 0
 
