@@ -321,7 +321,7 @@ for root, dirs, files in os.walk(directory):
             df = df[['sig_cancer', 'Age', 'PSA', 'Volume', 'PIRADS']]
             df.columns = ['sig_cancer', 'age', 'PSA', 'PV', 'PIRADS']
             df['5ARI'] = 0
-            # For now filling nans in volume with the mean
+            # For now filling nans in volume with the median
             df['PV'] = df['PV'].fillna(df['PV'].median())
             # For now drop nans in PSA
             df = df.dropna(subset = ['PSA'])

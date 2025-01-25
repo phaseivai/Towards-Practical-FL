@@ -117,4 +117,4 @@ f = open( args.output + "/matrix_msl.txt", "w")
 f.write(latex_auc_matrix)
 f.close()
 
-pd.DataFrame(final_auc_matrix_lso).to_csv(args.output + '/msl_matrix.csv', index=False, header=False)
+pd.DataFrame(final_auc_matrix).to_csv(args.output + '/msl_matrix.csv', index=False, header=False)
